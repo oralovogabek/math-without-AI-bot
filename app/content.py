@@ -1,0 +1,80 @@
+# Darslar: har bir level uchun boshlang'ich o'quv dasturi.
+COURSES = {
+    "foundation": ("🌱 Foundation", [
+        ("Natural sonlar", "Natural sonlar sanash uchun ishlatiladi: 1, 2, 3, ...", "12 + 8 = 20", "1, 2, 3, 4, ..."),
+        ("Butun sonlar", "Butun sonlarga manfiy sonlar, nol va musbat sonlar kiradi.", "-5, -2, 0, 3, 7", "... -2, -1, 0, 1, 2 ..."),
+        ("Sonlarni taqqoslash", ">, < va = belgilaridan foydalanamiz.", "8 > 5; 3 < 7", "> katta; < kichik; = teng"),
+        ("Qo'shish va ayirish", "Qo'shish miqdorlarni birlashtiradi, ayirish kamaytiradi.", "15 + 7 = 22; 15 - 7 = 8", "a+b; a-b"),
+        ("Ko'paytirish va bo'lish", "Ko'paytirish takroriy qo'shish, bo'lish teng taqsimlashdir.", "6 × 4 = 24; 24 ÷ 4 = 6", "a×b; a÷b"),
+        ("Amallar tartibi", "Avval qavs, keyin daraja, ko'paytirish/bo'lish, so'ng qo'shish/ayirish.", "2 + 3 × 4 = 14", "Qavs → Daraja → ×, ÷ → +, −"),
+        ("Kvadrat va kub", "Kvadrat sonni o'ziga ikki, kub uch marta ko'paytirishdir.", "5²=25; 2³=8", "a²=a×a; a³=a×a×a"),
+    ]),
+    "elementary": ("📘 Elementary", [
+        ("Oddiy kasrlar", "Kasr butunning teng qismlarini bildiradi. Yuqorida surat, pastda maxraj.", "3/5 da surat 3, maxraj 5.", "a/b, b ≠ 0"),
+        ("Kasrlarni taqqoslash", "Maxrajlar teng bo'lsa, surati katta kasr kattaroq.", "3/7 > 2/7", "a/c > b/c (a>b, c>0)"),
+        ("Kasrlarni qo'shish", "Maxrajlar teng bo'lsa, suratlarni qo'shamiz.", "2/7 + 3/7 = 5/7", "a/c+b/c=(a+b)/c"),
+        ("O'nli kasrlar", "Verguldan keyin o'ndan, yuzdan, mingdan birlar yoziladi.", "0.5 = 5/10", "0.1 = 1/10"),
+        ("Foizlar", "Foiz sonning yuzdan bir qismidir.", "200 ning 10 foizi = 20", "a × p / 100"),
+        ("Nisbat va proporsiya", "Proporsiya ikki nisbatning tengligidir.", "2/4 = 3/6", "a/b = c/d"),
+        ("Manfiy sonlar", "Noldan kichik sonlar manfiy deyiladi.", "-3 + 7 = 4", "(-a)+a=0"),
+    ]),
+    "pre_intermediate": ("📗 Pre-Intermediate", [
+        ("Algebraik ifodalar", "Sonlar va harflardan tuzilgan ifoda algebraik ifodadir.", "3x + 5", "x — o'zgaruvchi"),
+        ("Birhad va ko'phad", "Birhad bitta, ko'phad bir nechta haddan iborat.", "3x; x²+2x+1", "a+b+c"),
+        ("Qavslarni ochish", "Qavs tashqarisidagi ko'paytuvchini har bir hadga ko'paytiramiz.", "2(x+3)=2x+6", "a(b+c)=ab+ac"),
+        ("O'xshash hadlar", "Bir xil harf va darajali hadlarning koeffitsiyentlarini qo'shamiz.", "3x+5x=8x", "ax+bx=(a+b)x"),
+        ("Chiziqli tenglama", "Noma'lumning darajasi 1 bo'lgan tenglama.", "x+5=12; x=7", "ax+b=0"),
+        ("Darajalar", "Daraja takroriy ko'paytirishni qisqa yozadi.", "2⁴=16", "aᵐ×aⁿ=aᵐ⁺ⁿ"),
+    ]),
+    "intermediate": ("📙 Intermediate", [
+        ("Chiziqli tenglamalar", "Noma'lumning eng katta darajasi 1.", "3x−6=9; x=5", "ax+b=0; x=−b/a"),
+        ("Kvadrat tenglama", "Noma'lumning eng katta darajasi 2 bo'lgan tenglama.", "x²−5x+6=0", "ax²+bx+c=0"),
+        ("Diskriminant", "Diskriminant ildizlar sonini aniqlashga yordam beradi.", "D=25−24=1", "D=b²−4ac"),
+        ("Tengsizliklar", "Tengsizlik sonlarning katta-kichikligini ifodalaydi.", "2x>6; x>3", "Manfiy songa bo'lganda belgi almashadi"),
+        ("Tenglamalar sistemasi", "Bir nechta tenglamani birgalikda yechamiz.", "x+y=5; x−y=1", "Qo'shish yoki almashtirish usuli"),
+        ("Modul", "Modul sonning noldan masofasi, manfiy bo'lmaydi.", "|−5|=5", "|a|≥0"),
+    ]),
+    "upper_intermediate": ("📕 Upper-Intermediate", [
+        ("Burchaklar", "O'tkir <90°, to'g'ri =90°, o'tmas 90° va 180° orasida.", "45° o'tkir; 120° o'tmas", "Yoyiq burchak = 180°"),
+        ("Uchburchaklar", "Uchburchak ichki burchaklari yig'indisi 180°.", "60°+60°+60°=180°", "α+β+γ=180°"),
+        ("To'rtburchaklar", "To'rtburchak ichki burchaklari yig'indisi 360°.", "90°×4=360°", "S(to'g'ri to'rtburchak)=a×b"),
+        ("Aylana va doira", "Aylana markazdan teng uzoqlikdagi nuqtalar to'plami.", "r=3 bo'lsa L=6π", "L=2πr; S=πr²"),
+        ("Pifagor teoremasi", "To'g'ri burchakli uchburchakda gipotenuza kvadrati katetlar kvadratlari yig'indisi.", "3²+4²=5²", "c²=a²+b²"),
+        ("Sinus va kosinus", "Sinus — qarshi katet/gipotenuza; kosinus — yonma-yon katet/gipotenuza.", "sin 30°=1/2", "sin α=qarshi/gipotenuza"),
+    ]),
+    "advanced": ("🎯 Advanced", [
+        ("Funksiya", "Funksiya x qiymatiga y qiymatini mos qo'yadi.", "y=2x; x=3 → y=6", "y=f(x)"),
+        ("Chiziqli funksiya", "Chiziqli funksiya grafigi to'g'ri chiziq.", "y=2x+1", "y=kx+b"),
+        ("Kvadratik funksiya", "Kvadratik funksiya grafigi parabola.", "y=x²; x=2 → y=4", "y=ax²+bx+c"),
+        ("Logarifm", "Logarifm darajaga ko'tarishning teskari amali.", "log₂8=3", "logₐb=c ⇔ aᶜ=b"),
+        ("Arifmetik progressiya", "Ketma-ket hadlar ayirmasi doimiy.", "2, 5, 8, 11", "aₙ=a₁+(n−1)d"),
+        ("Geometrik progressiya", "Ketma-ket hadlar nisbati doimiy.", "2, 6, 18, 54", "bₙ=b₁qⁿ⁻¹"),
+    ]),
+    "expert": ("🧠 Expert", [
+        ("Hosila", "Hosila funksiyaning o'zgarish tezligini ifodalaydi.", "f(x)=x²; f'(x)=2x", "(xⁿ)'=nxⁿ⁻¹"),
+        ("Hosila qoidalari", "Yig'indi hosilasi hosilalar yig'indisiga teng.", "f=3x²+2x; f'=6x+2", "(f+g)'=f'+g'"),
+        ("Integral", "Aniqmas integral boshlang'ich funksiyalar oilasini beradi.", "∫2x dx=x²+C", "∫xⁿdx=xⁿ⁺¹/(n+1)+C"),
+        ("Kombinatorika", "Tanlash va joylashtirish usullarini o'rganadi.", "5!=120", "n!=1×2×...×n"),
+        ("Ehtimollik", "Hodisaning yuz berish imkoniyatini son bilan ifodalaydi.", "Tanga gerb: 1/2", "P(A)=qulay/barcha"),
+    ]),
+    "national_certificate": ("🏅 Milliy sertifikat", [
+        ("Algebra takrorlash", "Sonlar, kasrlar, darajalar va algebraik ifodalarni takrorlaymiz.", "2x+5=15; x=5", "a²−b²=(a−b)(a+b)"),
+        ("Tenglamalar va tengsizliklar", "Tenglamalarni va tengsizliklarni turli usullar bilan yechamiz.", "x²−9=0; x=±3", "ax²+bx+c=0"),
+        ("Funksiyalar", "Aniqlanish sohasi, qiymatlar sohasi va grafiklar.", "y=x²; x=−2 → y=4", "y=f(x)"),
+        ("Geometriya", "Uchburchak, to'rtburchak, aylana, yuza va hajm.", "Kvadrat tomoni 4: S=16", "S=a²; P=4a"),
+        ("Trigonometriya", "Sinus, kosinus, tangens va ayniyatlar.", "sin²x+cos²x=1", "sin²x+cos²x=1"),
+        ("Sinovga tayyorgarlik", "Aralash masalalarda shartni tahlil qilish, formula tanlash va tekshirish.", "Tahlil → formula → yechim", "Yechimni tekshirish shart"),
+    ]),
+}
+
+# Har bir darsga avtomatik mashq: darsning asosiy misoli bo'yicha emas,
+# xavfsiz, sodda savol-javob kartochkasi.
+EXERCISES = {
+    ("foundation", 1): ("Quyidagilardan qaysi biri natural son?", ["-2", "0", "7", "1/2"], "C", "7 natural son."),
+    ("foundation", 2): ("Qaysi biri manfiy butun son?", ["4", "-3", "0.5", "2"], "B", "-3 manfiy butun son."),
+    ("foundation", 3): ("Qaysi belgi to'g'ri: 9 __ 4?", [">", "<", "=", "+"], "A", "9 soni 4 dan katta."),
+    ("foundation", 4): ("18 + 7 = ?", ["24", "25", "26", "27"], "B", "18 + 7 = 25."),
+    ("foundation", 5): ("7 × 6 = ?", ["36", "40", "42", "48"], "C", "7 × 6 = 42."),
+    ("foundation", 6): ("3 + 2 × 5 = ?", ["25", "13", "15", "20"], "B", "Avval 2×5=10, keyin 3+10=13."),
+    ("foundation", 7): ("6² = ?", ["12", "18", "36", "64"], "C", "6² = 6×6 = 36."),
+}
